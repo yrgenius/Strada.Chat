@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease-in;
 }
 
 .modal__wrapper {
@@ -139,4 +140,22 @@
 .modal__button-settings {
     width: 25px;
     margin: 0;
+}
+
+/* ACTIVE */
+
+.modal__active {
+    display: flex;
+    opacity: 0;
+    animation: show 0.5s forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
