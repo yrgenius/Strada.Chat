@@ -1,0 +1,161 @@
+.modal {
+    background-color: #bebebe;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in;
+}
+
+.modal__wrapper {
+    width: 270px;
+    height: 320px;
+    background-color: #fff;
+    position: relative;
+}
+
+.modal__title,
+.modal__subtitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 21px;
+    margin-left: 14px;
+    margin-top: 21px;
+
+}
+
+.modal__title {
+    text-transform: capitalize;
+}
+
+
+.modal__button-close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 21px;
+}
+
+.modal__button-close::before,
+.modal__button-close::after {
+    content: "";
+    position: absolute;
+    background-color: #878787;
+    top: 50%;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    transition: all 0.2s ease-in;
+}
+
+.modal__button-close::before {
+    transform: rotate(45deg);
+}
+
+.modal__button-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal__button-close:hover::before {
+    transform: rotate(225deg);
+}
+
+.modal__button-close:hover::after {
+    transform: rotate(135deg);
+}
+
+
+.modal__inner {
+    position: relative;
+    padding: 0 14px;
+    top: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.modal__subtitle {
+    margin-left: 0;
+
+}
+
+.modal__input {
+    border: 1px solid #000000;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 1px 3px;
+    width: -webkit-fill-available;
+}
+
+.modal__button-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.modal__button {
+    font-size: 16px;
+    line-height: 19px;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+}
+
+
+/* AUTHORIZATION */
+
+.modal__authorization {
+    display: none;
+}
+
+/* CONFIRMATION */
+
+.modal__confirmation {
+    display: none;
+}
+
+
+/* SETTINGS */
+
+.modal__settings {
+    display: none;
+}
+
+.modal__input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 46px;
+    gap: 8px;
+}
+
+.modal__input-settings {
+    height: fit-content;
+    width: 215px;
+}
+
+.modal__button-settings {
+    width: 25px;
+    margin: 0;
+}
+
+/* ACTIVE */
+
+.modal__active {
+    display: flex;
+    opacity: 0;
+    animation: show 0.5s forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
