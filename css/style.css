@@ -34,12 +34,32 @@ body {
     transform: rotate(360deg);
 }
 
-.message {
+.chat {
     height: 440px;
     border: 1px solid #000000;
     margin: 0 8px;
     min-width: 304px;
+    overflow: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    padding: 10px;
 }
+
+.message {
+    border-radius: 10px;
+    width: 88%;
+    height: fit-content;
+    font-size: 20px;
+    border: 1px solid forestgreen;
+    padding: 4px 9px;
+}
+
+.message__user {
+    align-self: end;
+}
+
+.template__message {}
 
 .send__form {
     display: grid;
