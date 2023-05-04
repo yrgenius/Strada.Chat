@@ -51,8 +51,9 @@ body {
     width: 88%;
     height: fit-content;
     font-size: 20px;
-    border: 1px solid forestgreen;
+    border: 1px solid #30892a;
     padding: 4px 9px;
+    background: #F7F7F7;
 }
 
 .message__user {

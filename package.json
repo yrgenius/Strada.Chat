@@ -4,7 +4,8 @@
   "description": "Верстка [отсюда.](https://www.figma.com/file/DRJ30lFzYuux0Y16rOtfVP/%D0%A7%D0%B0%D1%82?node-id=0-1&t=hmhwZOyWk1TSFfPE-0)",
   "main": "index.js",
   "scripts": {
-    "start": "npx parcel index.html",
+    "start": "parcel ./src/index.html --no-source-maps --open",
+    "pro": "parcel build ./src/index.html --no-source-maps --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
