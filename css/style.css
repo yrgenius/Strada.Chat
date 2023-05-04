@@ -34,14 +34,14 @@ body {
     transform: rotate(360deg);
 }
 
-.wrapper {
+.message {
     height: 440px;
     border: 1px solid #000000;
     margin: 0 8px;
     min-width: 304px;
 }
 
-.wrapper__bottom {
+.send__form {
     display: grid;
     grid-template-columns: 1fr 46px;
     gap: 8px;
