@@ -12,7 +12,7 @@ function formHandler(event) {
     event.preventDefault();
 
     //TODO: разобраться со всплытием событий, события срабатывают дважды
-    console.log(event.target); // вот их инициализаторы
+    // console.log(event.target); // вот их инициализаторы
 
     if (INPUT.value.length > 0) {
         let newMessage = document.createElement('div');

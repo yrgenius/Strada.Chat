@@ -29,4 +29,4 @@ function closeModalPage(event) {
 }
 
 
-export { BUTTON_SETTINGS }
+export { BUTTON_SETTINGS, showModalPage, closeModalPage }
