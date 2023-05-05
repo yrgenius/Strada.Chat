@@ -17,17 +17,20 @@ function getCode() {
     event.preventDefault();
     const URL = 'https://edu.strada.one/api/user';
     const userEmail = document.querySelector('.modal__input-authoraze').value;
-
-    fetch(URL, {
+    const options = {
         method: 'POST',
         body: JSON.stringify({ email: userEmail }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-    })
-        .then(response => response.json())
-        .then(text => console.log(text));
+        headers: { 'Content-type': 'application/json; charset=UTF-8' }
+    };
 
+    fetch(URL, options)
+        .then(data => {
+            if (!data.ok) {
+                throw Error(data.status);
+            }
+            return data.json();
+        })
+        .then(text => console.log(text));
 }
 
 function inputCode() {
