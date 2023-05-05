@@ -159,3 +159,10 @@
         opacity: 1;
     }
 }
+
+/* TEMP */
+
+.button__authorization {
+    position: relative;
+    bottom: -83px;
+}

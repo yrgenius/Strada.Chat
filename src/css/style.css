@@ -42,7 +42,7 @@ body {
     overflow: auto;
     display: flex;
     flex-flow: column nowrap;
-    gap: 10px;
+    gap: 15px;
     padding: 10px;
 }
 
@@ -60,7 +60,23 @@ body {
     align-self: end;
 }
 
-.template__message {}
+.template__username {
+    font-size: 22px;
+    position: relative;
+    top: -17px;
+    background: inherit;
+    width: min-content;
+}
+
+.template__message {
+    margin-top: -17px;
+    overflow-wrap: anywhere;
+}
+
+.template__time {
+    text-align: end;
+    font-size: 15px;
+}
 
 .send__form {
     display: grid;
@@ -92,6 +108,6 @@ body {
     transform: scale(1.2) translateX(-5px);
 }
 
-.send {
+.send__img {
     transform: rotate(45deg) translate(-3px, 6px);
 }

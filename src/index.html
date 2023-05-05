@@ -29,7 +29,7 @@
         <form class="send__form">
             <input class="button input__button" type="text" placeholder="сообщение..">
             <button class="button button__send" type="submit">
-                <image class="send" src="./image/send.svg" alt="send"/>
+                <image class="send__img" src="./image/send.svg" alt="send"/>
             </button>
         </form>
 
@@ -73,20 +73,22 @@
                 <div class="modal__input-wrapper">
                     <input class="modal__input modal__input-settings" type="text" placeholder="Ваш Ник">
                     <button class="button modal__button-settings" type="submit">
-                        <image class="send" src="./image/send.svg" alt="send"></image>
+                        <image class="send__img" src="./image/send.svg" alt="send"></image>
                     </button>
                 </div>
             </form>
+            <button class="button__authorization">Avtorisation</button>
         </div>
     </div>
 
     
     <template class="template">
-        <!-- TODO: добавить ник и время  -->
+        <p class="template__username"></p>
         <p class="template__message"></p>
+        <p class="template__time"></p>
     </template>
 
-    <script src="./js/main.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
 
 </body>
 </html>

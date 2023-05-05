@@ -19,7 +19,9 @@ function formHandler(event) {
         newMessage.classList.add('message');
         newMessage.classList.add('message__user');
         newMessage.append(MESSAGE.content.cloneNode(1));
+        newMessage.querySelector('.template__username').textContent = "User";
         newMessage.querySelector('.template__message').textContent = INPUT.value;
+        newMessage.querySelector('.template__time').textContent = getTime();
         CHAT.append(newMessage);
     }
 
@@ -28,6 +30,11 @@ function formHandler(event) {
 
 function validationMessage(text) {
 
+}
+
+function getTime() {
+    const time = new Date;
+    return time.toLocaleTimeString().split(':', 2).join(":");
 }
 
 export { FORM }
