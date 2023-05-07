@@ -1,12 +1,11 @@
-const buttonSaveNickname = document.querySelector('.modal__button-settings');
-const authorizeButton = document.querySelector('.button__authorization');
+import { ELEMENTS } from "./constants.js";
 
-buttonSaveNickname.addEventListener('click', showAuthorizationPage);
-authorizeButton.addEventListener('click', showAuthorizationPage);
+ELEMENTS.modalSettingsButton.addEventListener('click', showAuthorizationPage);
 
 
 function showAuthorizationPage(event) {
     event.preventDefault();
+
     document.querySelector('.modal__settings').classList.remove('modal__active');
     showModalPage('modal__authorization');
 }
@@ -16,4 +15,4 @@ function showModalPage(classElement) {
     showPage.classList.add('modal__active');
 }
 
-export { buttonSaveNickname }
+export { showAuthorizationPage }

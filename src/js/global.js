@@ -1,13 +1,9 @@
-const BUTTON_POWER = document.querySelector('.button__exit');
-const BUTTON_SETTINGS = document.querySelector('.button__settings');
-const MODALS_PAGE = document.querySelectorAll('.modal');
-const MODAL_BUTTONS_CLOSE = document.querySelectorAll('.modal__button-close');
+import { ELEMENTS } from "./constants.js";
 
-
-BUTTON_POWER.addEventListener('click', () => window.close());
-BUTTON_SETTINGS.addEventListener('click', () => showModalPage('modal__settings'));
-Array.from(MODALS_PAGE).forEach(page => page.addEventListener('click', closeModalPage));
-Array.from(MODAL_BUTTONS_CLOSE).forEach(buttonClose => buttonClose.addEventListener('click', closeModalPage));
+ELEMENTS.buttonPower.addEventListener('click', () => window.close());
+ELEMENTS.buttonSettings.addEventListener('click', () => showModalPage('modal__settings'));
+Array.from(ELEMENTS.modalsPage).forEach(page => page.addEventListener('click', closeModalPage));
+Array.from(ELEMENTS.modalButtonClose).forEach(buttonClose => buttonClose.addEventListener('click', closeModalPage));
 
 
 function showModalPage(classElement) {
