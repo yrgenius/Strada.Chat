@@ -1,3 +1,5 @@
+import { getTime } from "./services.js";
+
 const FORM = document.querySelector('.send__form');
 const INPUT = document.querySelector('.input__button');
 const BUTTON = document.querySelector('.button__send');
@@ -26,15 +28,6 @@ function formHandler(event) {
     }
 
     INPUT.value = '';
-}
-
-function validationMessage(text) {
-
-}
-
-function getTime() {
-    const time = new Date;
-    return time.toLocaleTimeString().split(':', 2).join(":");
 }
 
 export { FORM }
