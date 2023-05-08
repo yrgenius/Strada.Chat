@@ -1,5 +1,5 @@
-import { ELEMENTS } from "./constants.js";
-import { useEventOnAnotherElement } from "./services.js";
+import { ELEMENTS } from "../constants.js";
+import { useEventOnAnotherElement } from "../services.js";
 
 const KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlyZ2VuaXVzODBAZ21haWwuY29tIiwiaWF0IjoxNjgzNTE1MzIyLCJleHAiOjE2ODcxMTE3MjJ9.RNMVyTs3tbhh7ShrQtkC9OhT0WQXPGSj7TwPqwoc-Qk";
 

@@ -1,7 +1,7 @@
 import { ELEMENTS } from "./constants.js";
 
-function validationMessage(text) {
-
+function validateMessage(text) {
+    return text.length;
 }
 
 function validateEMail(value) {
@@ -11,8 +11,11 @@ function validateEMail(value) {
         : 'yrgenius80@gmail.com';
 }
 
-function getTime() {
-    const time = new Date;
+function getTime(value) {
+    let time = undefined;
+    (value)
+        ? time = new Date(value)
+        : time = new Date();
     return time.toLocaleTimeString().split(':', 2).join(":");
 }
 
@@ -25,27 +28,43 @@ function getCookie(key) {
     }
 }
 
-function testRequest() {
+function testRequest(myUrl, method, body) {
     //GET https://edu.strada.one/api/user/me
     try {
-        const url = 'https://edu.strada.one/api/user/me';
-        const options = {
-            method: 'GET',
-            headers: { 'Content-type': 'application/json; charset=UTF-8' },
-            // body: JSON.stringify(body)
-        }
+        const url = myUrl || 'https://edu.strada.one/api/user/me';
 
-        fetch(url, options)
-            .then(response => {
-                let out = response.json();
-                console.log('data', out); //del
-                return out
-            })
-            .then(data => {
-                let out = data;
-                console.log(out); //del
-                return out;
-            });
+        if (method === 'GET') {
+            fetch(url)
+                .then(response => {
+                    let out = response.json();
+                    console.log('data', out); //del
+                    return out
+                })
+                .then(data => {
+                    let out = data;
+                    console.log(out); //del
+                    return out;
+                });
+        }
+        else {
+            const options = {
+                method: method,
+                headers: { 'Content-type': 'application/json; charset=UTF-8' },
+                body: JSON.stringify(body || '')
+            }
+
+            fetch(url, options)
+                .then(response => {
+                    let out = response.json();
+                    console.log('data', out); //del
+                    return out
+                })
+                .then(data => {
+                    let out = data;
+                    console.log(out); //del
+                    return out;
+                });
+        }
     }
     catch {
         console.info("testRequest error");
@@ -57,4 +76,4 @@ function useEventOnAnotherElement(element, myEvent) {
     element.dispatchEvent(event);
 }
 
-export { getTime, validateEMail, getCookie, testRequest, useEventOnAnotherElement }
+export { validateMessage, getTime, validateEMail, getCookie, testRequest, useEventOnAnotherElement }

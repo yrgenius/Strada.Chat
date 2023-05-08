@@ -1,4 +1,4 @@
-import { ELEMENTS } from "./constants.js";
+import { ELEMENTS } from "../constants.js";
 
 ELEMENTS.buttonPower.addEventListener('click', () => window.close());
 ELEMENTS.buttonSettings.addEventListener('click', () => showModalPage('modal__settings'));

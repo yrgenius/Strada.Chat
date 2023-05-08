@@ -1,5 +1,5 @@
-import { validateEMail } from "./services.js";
-import { ELEMENTS } from "./constants.js";
+import { validateEMail } from "../services.js";
+import { ELEMENTS } from "../constants.js";
 import { showModalPage } from "./global.js";
 
 ELEMENTS.modalAuthorizeButtonSendMail.addEventListener('click', getCodeHandler);

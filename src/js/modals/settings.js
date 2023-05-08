@@ -1,4 +1,4 @@
-import { ELEMENTS } from "./constants.js";
+import { ELEMENTS } from "../constants.js";
 
 ELEMENTS.modalSettingsButton.addEventListener('click', showAuthorizationPage);
 
