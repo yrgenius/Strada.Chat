@@ -7,8 +7,12 @@ export const ELEMENTS = {
     modalSettingsButton: document.querySelector('.modal__button-settings'),
     modalSettingsInput: document.querySelector('.modal__input-settings'),
 
-    modalAuthorizeInput: document.querySelector('.modal__input-authoraze'),
+    modalAuthorizeInput: document.querySelector('.modal__input-authorize'),
     modalAuthorizeButtonSendMail: document.querySelector('.modal__button-get'),
     modalAuthorizeButtonInputCode: document.querySelector('.modal__button-inp'),
+
+    modalConfirmInput: document.querySelector('.modal__confirm'),
+    modalConfirmButton: document.querySelector('.modal__button-confirm'),
 }
+
 
