@@ -61,7 +61,8 @@ body {
 }
 
 .template__username {
-    font-size: 22px;
+    font-size: 17px;
+    color: #9b9b9b;
     position: relative;
     top: -17px;
     background: inherit;
