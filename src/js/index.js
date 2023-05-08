@@ -26,15 +26,18 @@ async function loadPosts() {
 }
 
 function renderPosts(array) {
-    let data = array['messages'][0];
-    console.log(data); //del
-    let newMessage = document.createElement('div');
-    newMessage.classList.add('message');
-    newMessage.append(ELEMENTS.messages.content.cloneNode(1));
-    newMessage.querySelector('.template__username').textContent = data.user.name;
-    newMessage.querySelector('.template__message').textContent = data.text;
-    newMessage.querySelector('.template__time').textContent = getTime(data.createdAt);
-    ELEMENTS.chat.append(newMessage);
+    array = array['messages'].reverse();
+    for (let i = 0; i < array.length; i++) {
+        let data = array[i];
+        let newMessage = document.createElement('div');
+        newMessage.classList.add('message');
+        newMessage.append(ELEMENTS.messages.content.cloneNode(1));
+        newMessage.querySelector('.template__username').textContent = data.user.name;
+        newMessage.querySelector('.template__message').textContent = data.text;
+        newMessage.querySelector('.template__time').textContent = getTime(data.createdAt);
+        ELEMENTS.chat.append(newMessage);
+    }
+
 }
 
 
