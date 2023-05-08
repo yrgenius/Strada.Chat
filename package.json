@@ -2,9 +2,8 @@
   "name": "strada-chat",
   "version": "1.0.0",
   "description": "Верстка [отсюда.](https://www.figma.com/file/DRJ30lFzYuux0Y16rOtfVP/%D0%A7%D0%B0%D1%82?node-id=0-1&t=hmhwZOyWk1TSFfPE-0)",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "npx parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +17,9 @@
   },
   "homepage": "https://github.com/yrgenius/Strada.Chat#readme",
   "devDependencies": {
-    "eslint": "^8.39.0",
-    "parcel": "^2.8.3"
+    "eslint": "^8.39.0"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.5"
   }
 }

@@ -29,7 +29,7 @@
         <form class="send__form">
             <input class="button input__button" type="text" placeholder="сообщение..">
             <button class="button button__send" type="submit">
-                <image class="send" src="./image/send.svg" alt="send"></image>
+                <image class="send__img" src="./image/send.svg" alt="send"/>
             </button>
         </form>
 
@@ -41,16 +41,16 @@
             <button class="modal__button-close"></button>
             <form class="modal__inner">
                 <h2 class="modal__subtitle">Почта:</h2>
-                <input class="modal__input" type="text" placeholder="you@mail.com">
+                <input class="modal__input modal__input-authorize" type="text" placeholder="you@mail.com">
                 <div class="modal__button-wrapper">
-                    <button class="modal__button">Получить код</button>
-                    <button class="modal__button">Ввести код</button>
+                    <button class="modal__button modal__button-get">Получить код</button>
+                    <button class="modal__button modal__button-inp">Ввести код</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <div class="modal modal__confirmation">
+    <div class="modal modal__confirm">
         <div class="modal__wrapper">
             <h1 class="modal__title">подтверждение</h1>
             <button class="modal__button-close"></button>
@@ -58,7 +58,7 @@
                 <h2 class="modal__subtitle">Код:</h2>
                 <input class="modal__input" type="text" placeholder="Ваш код подтверждения">
                 <div class="modal__button-wrapper">
-                     <button class="modal__button">Войти</button>
+                     <button class="modal__button modal__button-confirm">Войти</button>
                 </div>
             </form>
         </div>
@@ -73,18 +73,21 @@
                 <div class="modal__input-wrapper">
                     <input class="modal__input modal__input-settings" type="text" placeholder="Ваш Ник">
                     <button class="button modal__button-settings" type="submit">
-                        <image class="send" src="./image/send.svg" alt="send"></image>
+                        <image class="send__img" src="./image/send.svg" alt="send"></image>
                     </button>
                 </div>
             </form>
         </div>
     </div>
 
+    
     <template class="template">
+        <p class="template__username"></p>
         <p class="template__message"></p>
+        <p class="template__time"></p>
     </template>
 
-    <script src="./js/main.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
 
 </body>
 </html>
