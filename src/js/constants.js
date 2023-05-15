@@ -18,6 +18,6 @@ export const ELEMENTS = {
     modalConfirmButton: document.querySelector('.modal__button-confirm'),
 }
 
-export const KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlyZ2VuaXVzODBAZ21haWwuY29tIiwiaWF0IjoxNjgzNTE1MzIyLCJleHAiOjE2ODcxMTE3MjJ9.RNMVyTs3tbhh7ShrQtkC9OhT0WQXPGSj7TwPqwoc-Qk";
+export const KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlyZ2VuaXVzODBAZ21haWwuY29tIiwiaWF0IjoxNjgzODA4NDg0LCJleHAiOjE2ODc0MDQ4ODR9.ZscfhAn7ABtAG11GQo5c19xUEeQQCpKT1mkrtpQUIsM";
 
 
