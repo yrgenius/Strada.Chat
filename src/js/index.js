@@ -1,14 +1,12 @@
 import { showModalPage } from "./modals/global.js";
 import { showAuthorizationPage } from "./modals/settings.js";
-import { getCodeHandler } from "./modals/authorization.js";
-import { inputCodeHandler } from "./modals/confirm.js";
-import { testRequest, getTime } from "./services.js";
-import { ELEMENTS } from "./constants.js";
-import { loadPosts } from "./loadPosts.js";
-import { FORM } from "./sendMessage.js";
+import { sendMessage } from "./sendMessage.js";
 
-//TODO: сделать скролл
-loadPosts();
+
+//TODO: сделать скролл по 20 сообщений
+//TODO: добавить просьбу авторизоваться если в куках нет ника
+//TODO: разобраться с рендером, вызывается много раз
+sendMessage();
 
 
 

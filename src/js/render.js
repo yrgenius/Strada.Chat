@@ -1,6 +1,11 @@
 import { ELEMENTS } from "./constants.js";
 import { getTime, getCookie } from "./services.js";
 
+// ELEMENTS.chat.addEventListener('scroll', () => {
+//     console.dir('scrollTop: ' + ELEMENTS.chat.scrollTop);
+//     console.dir('scrollHeight: ' + ELEMENTS.chat.scrollHeight);
+// });
+
 
 export function renderPosts(array) {
     let userName = getCookie('name');
@@ -22,5 +27,7 @@ export function renderPosts(array) {
         newMessage.querySelector('.template__message').textContent = data.text;
         newMessage.querySelector('.template__time').textContent = getTime(data.createdAt);
         ELEMENTS.chat.append(newMessage);
+        ELEMENTS.chat.scrollTop = ELEMENTS.chat.scrollHeight;
     }
 }
+

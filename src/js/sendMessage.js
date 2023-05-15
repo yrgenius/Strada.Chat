@@ -1,13 +1,9 @@
-import { getCookie, validateMessage } from "./services.js";
+import { validateMessage } from "./services.js";
 import { KEY } from "./constants.js";
 import { loadPosts } from "./loadPosts.js";
 
-const FORM = document.querySelector('.send__form');
 const INPUT = document.querySelector('.input__button');
 const BUTTON = document.querySelector('.button__send');
-const CHAT = document.querySelector('.chat');
-const MESSAGE = document.querySelector('.template');
-const USER = getCookie('name') || "User";
 
 INPUT.addEventListener('change', formHandler);
 BUTTON.addEventListener('click', formHandler);
@@ -22,22 +18,11 @@ function formHandler(event) {
     if (validateMessage(INPUT.value)) {
         // createUserMessage();
         sendMessage(INPUT.value);
-        setTimeout(loadPosts(), 1000);
+        setTimeout(() => loadPosts(), 1000);
     }
 
     INPUT.value = '';
 }
-
-// function createUserMessage() {
-//     let newMessage = document.createElement('div');
-//     newMessage.classList.add('message');
-//     newMessage.classList.add('message__user');
-//     newMessage.append(MESSAGE.content.cloneNode(1));
-//     newMessage.querySelector('.template__username').textContent = USER;
-//     newMessage.querySelector('.template__message').textContent = INPUT.value;
-//     newMessage.querySelector('.template__time').textContent = getTime();
-//     CHAT.append(newMessage);
-// }
 
 function sendMessage(message) {
     const URL = `wss://edu.strada.one/websockets?${KEY}`;
@@ -46,19 +31,27 @@ function sendMessage(message) {
     console.dir(socket);
 
     socket.onopen = (e) => {
-        console.log('OPEN SOCKET AND SEND MY MESSAGE');
         console.log(e);
-        socket.send(JSON.stringify({ 'text': text }));
+        if(text) socket.send(JSON.stringify({ 'text': text }));
+        loadPosts();
+        console.log('OPEN SOCKET AND SEND MY MESSAGE AND GET ALL POST');
     }
 
     socket.onmessage = (e) => {
-        console.log('OPEN SOCKET AND GET DATA');
         console.log(e);
         console.log(e.data);
+        console.log('GET DATA >>>');
+        loadPosts();
+    }
+
+    socket.onclose = (e) => {
+        console.log(e);
+        sendMessage();
+        console.log('SOCKET CLOSE >>>>>>>>>>>>>>>>>>>>>>>');
     }
 }
 
-export { FORM }
+export { sendMessage }
 
 
 // Чтобы получить состояние соединения, существует дополнительное свойство socket.readyState со значениями:
